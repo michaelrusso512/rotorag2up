@@ -1,0 +1,3 @@
+{
+  "/download/request?host=:limit": "/configurations?_limit=:limit"
+}

@@ -1,0 +1,97 @@
+{
+  "name": "tenable",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Michael Russo <michaelrusso512@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test:build": "babel  --source-maps --out-dir .output --ignore=node_modules,dist src",
+    "test": "yarn run jest",
+    "test:watch": "yarn run jest --watch",
+    "test:watchAll": "yarn run jest --watchAll",
+    "start:dev": "NODE_ENV=development webpack-dev-server",
+    "build": "babel --out-dir dist --ignore=templates,utils,**/*.spec.js src"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/utils/jestsetup.js"
+    ],
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    },
+    "coverageReporters": [
+      "text",
+      "html"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-plugin-react-css-modules": "^3.3.3",
+    "babel-plugin-root-import": "^5.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hot": "^1.0.5",
+    "babel-preset-stage-0": "^6.24.1",
+    "browserslist": "^3.1.1",
+    "classnames": "^2.2.5",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.10",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.18.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-compat": "^2.2.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.12.2",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "faker": "^4.1.0",
+    "html-webpack-plugin": "^2.30.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.4.2",
+    "jest-enzyme": "^4.2.0",
+    "json-server": "^0.12.1",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.0",
+    "react-hot-loader": "^4.0.0-rc.0",
+    "style-loader": "^0.20.2",
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.1.0",
+    "stylelint-no-unsupported-browser-features": "^2.0.0",
+    "stylelint-scss": "^2.4.0",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "lodash": "^4.17.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

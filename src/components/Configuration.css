@@ -1,0 +1,13 @@
+.wrapper {
+  font-family: "Lucida Console", Monaco, monospace;
+  background-color: #F4F4F4;
+  display: block;
+  width: 550px;
+}
+
+.json {
+  width: 100%;
+}
+.json:hover {
+  background-color: #68e29b;
+}

@@ -1,0 +1,37 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "> 5% in US"
+        ]
+      },
+      "debug": false
+    }],
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    ["babel-plugin-root-import", {
+      "rootPathPrefix": "~",
+      "rootPathSuffix": "./src"
+    }],
+    "transform-object-assign",
+    "transform-es2015-destructuring",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-runtime",
+    "lodash"
+  ],
+  "env": {
+    "development": {
+      "presets": ["react-hot"],
+      "plugins": [
+        "react-hot-loader/babel",
+        ["react-css-modules", {
+          "webpackHotModuleReloading": true
+        }]
+      ]
+    }
+  }
+}
