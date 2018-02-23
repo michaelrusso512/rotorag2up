@@ -1,9 +1,9 @@
-## `yarn install &&  npx json-server --watch db.json --routes routes.json`
+- `yarn install && npx json-server --watch db.json --routes routes.json`
+- *in a separate window* `yarn run start:dev`
 
-## (in a separate window) `yarn run start:dev`
+1) A server sends the following data when requesting `http://[yourserver]/download/request?host=2`  :
 
-1) A server sends the following data when requesting 'http://[yourserver]/download/request?host=2'  :
-
+```
 {
 "configurations" : [
      {
@@ -20,6 +20,7 @@
      }
  ]
 }
+```
 
 Write an HTML/JS code to send this request and display the result.
 
@@ -49,4 +50,4 @@ See source code
 
 5) instead of sending host=2 you now send host=10000 and the response contains 10000 fields. How would you handle that? What could be improved to get the best performance?
 
-- Performance can be improved by minimizing bandwith (paging, caches, etc.) and minimizing DOM operations. The latter can be accomplished by rendering only what is visible in the browser, as DOM operations are expensive. For example, with a large scrolling table, we keep the records in memory, only rendering and mounting those records that fall within the visible space. The bounding area dimensions be retrieved from the DOM and stored in `state` via componentDidMount and componentDidUpdate.
+*Performance can be improved by minimizing bandwith (paging, caches, etc.) and minimizing DOM operations. The latter can be accomplished by rendering only what is visible in the browser, as DOM operations are expensive. For example, with a large scrolling table, we keep the records in memory, only rendering and mounting those records that fall within the visible space. The bounding area dimensions be retrieved from the DOM and stored in `state` via componentDidMount and componentDidUpdate.*
