@@ -1,5 +1,8 @@
 - `yarn install && npx json-server --watch db.json --routes routes.json`
 - *in a separate window* `yarn run start:dev`
+- visit http://localhost:8080/
+- uses React, Webpack, CSS Modules, fetch, Babel, autoprefixer and probably a bit of unused dependencies, too :).
+- Renders to "Configuration" components with cheap hover effect.
 
 1) A server sends the following data when requesting `http://[yourserver]/download/request?host=2`  :
 
